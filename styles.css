@@ -1,5 +1,3 @@
-/* styles.css */
-
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -7,7 +5,12 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background: linear-gradient(135deg, #f0f0f0, #cfcfcf);
+    transition: background 0.3s;
+}
+
+body.dark-theme {
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
 }
 
 .container {
@@ -18,6 +21,12 @@ body {
     width: 100%;
     max-width: 500px;
     text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-theme .container {
+    background: #34495e;
+    color: white;
 }
 
 h1, h2 {
@@ -33,6 +42,15 @@ h1, h2 {
     padding: 10px;
     width: calc(100% - 22px);
     box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+body.dark-theme .input-section input {
+    background: #2c3e50;
+    color: white;
+    border: 1px solid #4ca1af;
 }
 
 .button-section {
@@ -48,10 +66,19 @@ h1, h2 {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
+    transition: background 0.3s;
 }
 
 #filterButton:hover, #addButton:hover, #displayAllButton:hover {
     background-color: #0056b3;
+}
+
+body.dark-theme #filterButton, body.dark-theme #addButton, body.dark-theme #displayAllButton {
+    background-color: #4ca1af;
+}
+
+body.dark-theme #filterButton:hover, body.dark-theme #addButton:hover, body.dark-theme #displayAllButton:hover {
+    background-color: #007BFF;
 }
 
 #resultList {
@@ -64,4 +91,10 @@ h1, h2 {
     background-color: #e9e9e9;
     margin: 5px 0;
     border-radius: 4px;
+    transition: background 0.3s;
 }
+
+body.dark-theme #resultList li {
+    background-color: #4ca1af;
+}
+

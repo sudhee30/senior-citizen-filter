@@ -1,5 +1,8 @@
 // script.js
 
+document.getElementById('themeToggleButton').addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+});
 document.addEventListener('DOMContentLoaded', function () {
     const fileInput = document.getElementById('fileInput');
     const nameInput = document.getElementById('nameInput');
